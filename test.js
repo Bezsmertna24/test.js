@@ -280,12 +280,334 @@
 // console.log(createReversedArray(12, 85, 37, 4));
 
 
-// ✅ Працює виклик перед оголошенням
-multiply(1, 2, 3);
+// // ✅ Працює виклик перед оголошенням
+// multiply(1, 2, 3);
 
-function multiply(x, y, z) {
-  console.log(x * y * z);
-}
+// function multiply(x, y, z) {
+//   console.log(x * y * z);
+// }
 
-// ✅ Працює виклик після оголошення
-multiply(4, 5, 6);
+// // ✅ Працює виклик після оголошення
+// multiply(4, 5, 6);
+
+// const key = "nickname";
+// const value = "SuperHenry";
+
+// const profile = {
+//   [key]: value,
+// };
+
+
+// console.log(profile.nickname); // SuperHenry
+
+
+// function countProps(object) {
+//   let propCount = 0;
+
+//   const keys = Object.keys(object);
+//   for (const key of keys) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+
+//   return propCount;
+// }
+
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+// console.log(countProps({ name: "Mango", age: 2 }));
+
+
+
+
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const values = Object.values(salaries);
+//    for (const value of values) {
+//     totalSalary += value;
+//    }
+//    return totalSalary;
+// }
+
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));     
+// //330
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+// console.log(countTotalSalary({}));
+
+
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+
+//   const nameToSearch = productName;  
+//   for (const product of products) {
+//     if (product.name === nameToSearch){
+//       return product.price;
+//     } 
+//   }
+//   return null;
+// }
+// console.log(getProductPrice("Grip"));
+// console.log(getProductPrice("Radar"));
+
+
+
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   const ress = [];
+//   for (const product of products) {
+//     const keys = Object.keys(product);
+//     for (const key of keys) {
+//       if (key === propName) {
+//         ress.push(product[key]);
+//       }
+//     }
+//   }
+//   return ress;
+// }
+
+// console.log(getAllPropValues("name"));
+// console.log(getAllPropValues("price"));
+
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   } 
+//   return `Product ${productName} not found!`
+// }
+
+// console.log(calculateTotalPrice("Radar"));
+// console.log(calculateTotalPrice("Grip"));
+
+// function findProductQuantity(productName) {
+//   const products = [
+//         { name: "Radar", price: 1300, quantity: 4 },
+//         { name: "Scanner", price: 2700, quantity: 3 },
+//         { name: "Droid", price: 400, quantity: 7 },
+//         { name: "Grip", price: 1200, quantity: 9 },
+//        ];
+//        for (const product of products) {
+//         if (product.name === productName) {
+//           return product.quantity;
+//         }
+//        }
+//                return `Sorry, ${productName} is not in stock!`
+// }
+// console.log(findProductQuantity("Scanner"));
+
+
+
+// function getProductInfo(productName) {
+//   const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+  
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       return `Product: ${product.name}, Price: ${product.price}, Quantity: ${product.quantity}`;
+//     }
+//   }
+// return `Product ${productName} not found`;
+// }
+
+// console.log(getProductInfo("Scanner"));
+
+
+// const atTheOldToad = {
+//   potions : [],
+//   getPotions() {
+//     return "List of all available potions";
+//   },
+//   addPotion(potionName) {
+//     return `Adding ${potionName}`;
+//   }
+// }
+
+// console.log(atTheOldToad.addPotion("Invisibility"));
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Stone skin"],
+//   getPotions() {
+//     return this.potions;
+//   },
+// };
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Stone skin"],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(potionName) {
+//     this.potions.push(potionName);
+//     return this.potions
+//   },
+// };
+
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion("Invisibility"));
+
+// const bookShelf = {
+//   books: [
+//     { title: "The Last Kingdom", rating: 8 },
+//     { title: "The Mist", rating: 6 },
+//   ],
+//   getAvarageRating() {
+//     let totalRating = 0;
+
+//     for (const book of this.books) {
+//       totalRating += book.rating;
+//     }
+
+//     return totalRating / this.books.length;
+//   },
+// };
+
+// bookShelf.getAvarageRating(); // 7
+// console.log(bookShelf.getAvarageRating());
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     this.potions.push(newPotion);
+//   },
+//   getTotalPrice() {
+//     let total = 0;
+//     for (const potion of this.potions) {
+//       total += potion.price;
+//     }
+//     return total;
+//   },
+// };
+// console.log(atTheOldToad.getTotalPrice());
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const potion of this.potions){
+//       if (potion.name === oldName){
+//         potion.name = newName;
+//       }
+//     }
+//   },
+// };
+
+// function add(...args) {
+// let total = 0;
+// for (const i = 0; i <= args; i++) {
+//   total += i;
+// }
+//   return total;
+  
+// }
+
+
+// function add(...args) {
+//   let sum = 0;
+//   for (let num of args) {
+//     sum += num;
+//   }
+//   return sum;
+// }
+// console.log(add(12, 4, 11, 48));  // 75
+
+// function multiply(...args) {
+// let total = 1;
+// for ( const num of args) {
+//   total *= num;
+// }
+// return total;
+// }
+// console.log(multiply(2, 3, 4)); //24
+
+
+// function addOverNum(value, ...args) {
+// let total = 0;
+// for (const num of args) {
+//   if (num > value) {
+//     total += num
+//   }
+// }
+// return total;
+// }
+
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36)); //218
+
+
+// function getExtremeScores(scores) {
+//   return {
+//     best: Math.max(...scores),
+//     worst: Math.min(...scores)
+//   };
+// }
+
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+
