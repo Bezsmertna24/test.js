@@ -660,3 +660,345 @@
 // };
 
 // const finalSettings = { ...defaultSettings,...overrideSettings};
+
+
+// function deliverPizza(pizzaName) {
+//     return `Delivering ${pizzaName} pizza.`;
+//   }
+  
+//   function makePizza(pizzaName) {
+//     return `Pizza ${pizzaName} is being prepared, please wait...`;
+//   }
+  
+//   function makeMessage(pizzaName, callback) {
+//     callback(pizzaName);
+//     return callback(pizzaName);
+//   }
+  
+
+//   console.log(makeMessage("Royal Grand", makePizza)); //"Pizza Royal Grand is being prepared, please wait..."
+  
+
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}`);
+// });
+
+// makePizza("Ultracheese", );
+
+
+
+
+
+
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function (orderedItem) {
+//     totalPrice += orderedItem;
+//   });
+
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+
+
+
+
+
+// function filterArray(numbers, value) {
+//   let filterNum = [];
+
+//   numbers.forEach(function(number) {
+
+//     if (number > value) {
+//       filterNum.push(number);
+//     }
+//   });
+//   return filterNum;
+// }
+
+// console.log(filterArray([12, 24, 8, 41, 76], 20));
+
+
+
+
+
+// const calculateTotalPrice = (orderedItems) => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach((item) => {
+//     totalPrice += item;
+//   });
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([164, 48, 291]));
+
+
+
+
+// Функція changeEven(numbers, value) приймає масив чисел numbers і оновлює кожен елемент, значення якого - це парне число, додаючи до нього значення параметра value, який точно є числом.
+
+// Виконай рефакторинг функції таким чином, щоб вона стала чистою - не змінювала масив чисел numbers, а створювала, наповнювала і повертала новий масив з оновленими значеннями.
+// const changeEven = (numbers, value) => {
+//   const newArray = []; 
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {
+//       newArray.push(numbers[i] + value);
+//     }else{ 
+//       newArray.push(numbers[i]);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100)); //[144, 13, 81, 192, 136, 154]
+
+
+
+
+
+
+
+
+
+
+
+//В масиві planets зберігаються назви планет. Доповни код таким чином, щоб у змінній planetsLengths вийшов масив, що буде складатися з довжин назв кожної планети з масиву planets. Обов'язково використовуй метод map().
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// const planetsLengths = planets.map(planet => planet.length);
+
+
+//Масив books містить колекцію об'єктів книг, кожен з яких містить властивості title, author, rating. Використовуючи метод map(), зроби так, щоб у змінній titles вийшов масив назв усіх книг (властивість title) з масиву books.
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const titles = books.map (book => book.title);
+
+// console.log(titles);
+
+
+
+// const numbers = [5, 10, 15, 20, 25];
+// const newNumbers = numbers.map(number => number * 2);
+
+// const users = [
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 30 },
+//   { name: 'Charlie', age: 35 }
+// ];
+// const newUserName = users.map(user => user.name);
+
+// const letters = ['A', 'B', 'C', 'D'];
+// const newIndex = letters.map((letter, index) => letter = index)
+
+// const words = ['apple', 'banana', 'cherry', 'date'];
+// const wordsInUpperCase = words.map(word => word.toUpperCase());
+
+
+//Доповни код так, щоб у змінній evenNumbers був масив парних чисел із масиву numbers, а у змінній oddNumbers — масив непарних. Обов'язково використовуй метод filter().
+
+// const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+
+// const evenNumbers = numbers.filter(number => number % 2 === 0);
+// const oddNumbers = numbers.filter(number => !(number % 2 === 0));
+
+
+// console.log(oddNumbers);
+
+
+//Масив books містить колекцію об'єктів книг, кожен з яких містить властивості title, author, rating. Використовуючи метод filter(), доповни код таким чином, щоб:
+//У змінній topRatedBooks утворився масив книг, рейтинг яких (властивість rating) більший за або дорівнює значенню змінної MIN_RATING.
+//У змінній booksByAuthor утворився масив книг, написаних автором з ім'ям (властивість author), яке збігається зі значенням у змінній AUTHOR.
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+// console.log(topRatedBooks);
+// console.log(booksByAuthor);
+
+
+  // const getUsersWithFriend = (users, friendName) => {
+  //   return users.filter(user => user.friends.includes(friendName));
+  // }
+
+  // const allUsers = [
+  //   {
+  //     name: "Moore Hensley",
+  //     friends: ["Sharron Pace"]
+  //   },
+  //   {
+  //     name: "Sharlene Bush",
+  //     friends: ["Briana Decker", "Sharron Pace"]
+  //   },
+  //   {
+  //     name: "Ross Vazquez",
+  //     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"]
+  //   },
+  //   {
+  //     name: "Elma Head",
+  //     friends: ["Goldie Gentry", "Aisha Tran"]
+  //   },
+  //   {
+  //     name: "Carey Barr",
+  //     friends: ["Jordan Sampson", "Eddie Strong"]
+  //   },
+  //   {
+  //     name: "Blackburn Dotson",
+  //     friends: ["Jacklyn Lucas", "Linda Chapman"]
+  //   },
+  //   {
+  //     name: "Sheree Anthony",
+  //     friends: ["Goldie Gentry", "Briana Decker"]
+  //   }
+  // ];
+  
+  // console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
+  // // [
+  // //   {
+  // //     name: "Sharlene Bush",
+  // //     friends: ["Briana Decker", "Sharron Pace"]
+  // //   },
+  // //   {
+  // //     name: "Sheree Anthony",
+  // //     friends: ["Goldie Gentry", "Briana Decker"]
+  // //   }
+  // // ]
+  
+  // console.log(getUsersWithFriend(allUsers, "Goldie Gentry"));
+  // // [
+  // //   {
+  // //     name: "Elma Head",
+  // //     friends: ["Goldie Gentry", "Aisha Tran"]
+  // //   },
+  // //   {
+  // //     name: "Sheree Anthony",
+  // //     friends: ["Goldie Gentry", "Briana Decker"]
+  // //   }
+  // // ]
+  
+  // console.log(getUsersWithFriend(allUsers, "Adrian Cross" )); // []
+  
+
+
+
+  //Ігровому сервісу необхідний функціонал підрахунку середнього часу, проведеного в іграх, одним гравцем. У змінній players зберігається об'єкт, де ключ це ім'я гравця, а значення - його ігровий час. У змінній playtimes зберігається масив значень об'єкта players, тобто масив ігрового часу усіх гравців. Значенням змінної averagePlayTime буде середній час, проведений одним гравцем в іграх.
+//Доповни код таким чином, щоб у змінній totalPlayTime вийшов загальний ігровий час з масиву playtimes. Використовуй метод reduce().
+
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+
+// const totalPlayTime = playtimes.reduce((playtime, number) => {
+//  return playtime + number
+// }, 0);
+
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// console.log(totalPlayTime);
+
+
+// У змінній players зберігається масив об'єктів, кожен з яких має властивості name, playtime та gamesPlayed.
+// Нашому сервісу необхідно розрахувати середній час, проведений в одній грі для кожного гравця, і отримати загальну суму цих значень часу у змінній totalAveragePlaytimePerGame. Розрахувати час для кожного з гравців можна, розділивши його час (властивість playtime) на кількість ігор (властивість gamesPlayed).
+// Поради:
+// Використовуй метод reduce() для ітерації по масиву players та обчислення загальної суми середнього часу на одну гру.
+// Усередині колбек функції reduce(), поділи playtime гравця на gamesPlayed, щоб отримати середній час, витрачений на одну гру кожним гравцем.
+// Накопичуй результат у змінній acc і повертай його в кінці кожної ітерації.
+// Ініціалізуй параметр acc методу reduce() початковим значенням 0, щоб уникнути отримання NaN при виконанні обчислень.
+// В результаті змінна totalAveragePlaytimePerGame міститиме загальну суму середнього часу на одну гру для всіх гравців.
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
+//   return acc + (player.playtime / player.gamesPlayed);
+// }, 0);
+// console.log(totalAveragePlaytimePerGame);
+
+
+//Масив books містить масив об'єктів книг, кожен з яких містить властивості title, author, rating.
+//Доповни код таким чином, щоб у змінній names вийшов масив імен авторів в алфавітному порядку, рейтинг книг яких більший за значення змінної MIN_BOOK_RATING. Використовуй ланцюжок методів.
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+
+// const names = books
+// .filter(book => book.rating > MIN_BOOK_RATING)
+// .map(book => book.author)
+// .toSorted((a,b) => a.localeCompare(b));
+
+
+// console.log(names);//["Bernard Cornwell", "Howard Lovecraft", "Robert Sheckley"]
